@@ -9,16 +9,16 @@ pip install resp
 ## Usage
 
 ```bash
-python -m resp -i /path/to/big_dump.txt -r 'SET {0} {1}' | recis-cli --pipe
+python -m resp   -i /path/to/big_dump.txt --delimiter ',' --redis 'SET {0} {1}' | recis-cli --pipe
 ```
 
-If the order of the data isn't relevant, you can split the origin file in multiple chunks and pipe them to the script:
+If the order of the data isn't relevant, you can split the origin file in multiple chunks and pipe them to the script concurrently:
 
 ```bash
-cat /path/to/big_dump.txt | parallel --block 5M -j 4 --pipe python -m resp -r 'SET {0} {1}' --pipe | recis-cli --pipe
+cat /path/to/big_dump.txt | parallel -j4 --block 1M -I ,, --pipe 'python -m resp -r "SET {0} {1}" --pipe' | recis-cli --pipe
 ```
 
-Don't forget to install the application [parallel](https://www.gnu.org/software/parallel/) on your system with `sudo apt-get install parallel` on Linux or `brew install parallel` on macOS.
+If [parallel](https://www.gnu.org/software/parallel/) isn't already installed on your system, you can install it with `sudo apt-get install parallel` on Linux or `brew install parallel` on macOS. 
 
 ## API
 
