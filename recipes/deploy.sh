@@ -18,7 +18,7 @@ version=`python -c "from resp.Parser import Parser; print(Parser.__version__);"`
 # Target (e.g.: pypitest, pypi):
 target=https://test.pypi.org/legacy/
 if [[ $# -eq 1 ]] ; then
-    target=https://pypi.org/legacy/
+    target=https://upload.pypi.org/legacy/
 fi
 
 # Package:
