@@ -45,3 +45,13 @@ source activate resp
 ```bash
 python -m unittest discover -vp '*Test.py'
 ```
+
+
+## Questions?
+
+Don't be shy and feel free to contact me by e-mail or on [Twitter](https://twitter.com/darius_morawiec).
+
+
+## License
+
+The module is Open Source Software released under the [MIT](license.txt) license.
