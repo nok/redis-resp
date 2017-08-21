@@ -20,4 +20,3 @@ dependencies:
 - pip:
   - six==1.10.0
 prefix: /Users/darius/anaconda2/envs/resp
-
