@@ -16,18 +16,15 @@ rm -rf ./dist/*
 version=`python -c "from resp.Parser import Parser; print(Parser.__version__);"`
 
 # Target (e.g.: pypitest, pypi):
-target=pypitest
+target=https://test.pypi.org/legacy/
 if [[ $# -eq 1 ]] ; then
-    target=$1
+    target=https://pypi.org/legacy/
 fi
 
 # Package:
 python ./setup.py sdist bdist_wheel
-twine register ./dist/$name-$version.tar.gz -r $target
-twine register ./dist/$name-$version-py2-none-any.whl -r $target
-
 read -r -p "Upload $name@$version to '$target'? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
-    twine upload ./dist/* -r $target
+    twine upload ./dist/* --repository-url $target
 fi
