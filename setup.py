@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools import find_packages
 
 
 path = os.path.abspath(os.path.dirname(__file__))
-
-# Version:
-version = '0.1.0'
-
 setup(
     name='resp',
     packages=find_packages(exclude=["tests.*", "tests"]),
     include_package_data=True,
-    version=version,
+    version='0.1.0',
     description='Making the Redis Mass Insertion simple.',
     author='Darius Morawiec',
     author_email='ping@nok.onl',
