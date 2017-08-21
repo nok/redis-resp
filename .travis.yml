@@ -31,7 +31,7 @@ install:
   - conda update -q conda
   - conda install -n root _license
   - conda info -a
-  - conda env create -q -n sklearn-porter python=$TRAVIS_PYTHON_VERSION -f environment.yml
+  - conda env create -q -n resp python=$TRAVIS_PYTHON_VERSION -f environment.yml
   - pip install -U pip
   - source activate resp
 before_script:

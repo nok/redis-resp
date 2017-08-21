@@ -1,5 +1,10 @@
 # resp
 
+[![Build Status](https://img.shields.io/travis/nok/resp/master.svg)](https://travis-ci.org/nok/resp)
+[![PyPI](https://img.shields.io/pypi/v/resp.svg)](https://pypi.python.org/pypi/resp)
+[![PyPI](https://img.shields.io/pypi/pyversions/resp.svg)](https://pypi.python.org/pypi/resp)
+[![GitHub license](https://img.shields.io/pypi/l/sklearn-porter.svg)](https://raw.githubusercontent.com/nok/resp/master/license.txt)
+
 Making the [Redis](https://redis.io/) [Mass Insertion](https://redis.io/topics/mass-insert) simple.
 
 ## Installation
