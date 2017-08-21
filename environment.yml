@@ -19,7 +19,6 @@ dependencies:
 - conda-forge::zlib=1.2.11=0
 - pip:
   - six==1.10.0
-  - tbb==0.1
   - yasm==0.0
 prefix: /Users/darius/anaconda2/envs/resp
 
