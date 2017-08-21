@@ -1,6 +1,6 @@
 # resp
 
-Resp makes the [Redis Mass Insertion](https://redis.io/topics/mass-insert) simple.
+Making the [Redis](https://redis.io/) [Mass Insertion](https://redis.io/topics/mass-insert) simple.
 
 ## Installation
 
