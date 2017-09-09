@@ -16,13 +16,18 @@ pip install resp
 ## Usage
 
 ```bash
-python -m resp -i /path/to/dump.txt -d ',' -r 'RPUSH {0} {1}' | recis-cli --pipe
+python \
+    -m resp \                           # the installed module 'resp' 
+    -i /path/to/dump.txt \              # the path to the input file
+    -d ',' \                            # the delimiter (default: ',')
+    -r 'RPUSH {0} {1} | SET {0} {2}' \  # the Redis command(s)
+        | recis-cli --pipe
 ```
 
 If the order of the data isn't relevant, you can split the origin file in multiple chunks and pipe them to the script concurrently:
 
 ```bash
-cat /path/to/dump.txt | parallel -j4 --block 1M -I ,, --pipe 'python -m resp -r "SET {0} {1}" -p' | recis-cli --pipe
+cat /path/to/dump.txt | parallel -j4 --block 1M -I ,, --pipe 'python -m resp -d "," -r "SET {0} {1}" -p' | recis-cli --pipe
 ```
 
 If [parallel](https://www.gnu.org/software/parallel/) isn't already installed on your system, you can install it with `sudo apt-get install parallel` on Linux or `brew install parallel` on macOS. 
