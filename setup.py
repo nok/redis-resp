@@ -14,7 +14,7 @@ setup(
     description='Making the Redis Mass Insertion simple.',
     author='Darius Morawiec',
     author_email='ping@nok.onl',
-    url='https://github.com/nok/resp/tree/stable',
+    url='https://github.com/nok/redis=resp/tree/stable',
     classifiers=[
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
