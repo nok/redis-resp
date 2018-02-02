@@ -8,7 +8,7 @@ import re
 
 class Parser:
 
-    __version__ = '0.1.0'
+    __version__ = '0.1.2'
 
     def __init__(self, file_path='', redis='', delimeter=',', pipe=False):
         rows = self.read_stdin() if pipe else self.read_file(file_path)
