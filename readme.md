@@ -1,6 +1,6 @@
 # redis-resp
 
-[![Build Status](https://img.shields.io/travis/nok/resp/master.svg)](https://travis-ci.org/nok/resp)
+[![Build Status](https://img.shields.io/travis/nok/redis-resp/master.svg)](https://travis-ci.org/nok/resp)
 [![PyPI](https://img.shields.io/pypi/v/resp.svg)](https://pypi.python.org/pypi/resp)
 [![PyPI](https://img.shields.io/pypi/pyversions/resp.svg)](https://pypi.python.org/pypi/resp)
 [![GitHub license](https://img.shields.io/pypi/l/sklearn-porter.svg)](https://raw.githubusercontent.com/nok/resp/master/license.txt)
